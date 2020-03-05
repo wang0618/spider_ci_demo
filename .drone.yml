@@ -1,0 +1,11 @@
+kind: pipeline
+type: docker
+
+steps:
+  - name: test
+    image: alpine:3.11
+    commands:
+      - env
+
+node:
+  env: act
