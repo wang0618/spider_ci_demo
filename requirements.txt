@@ -1,0 +1,3 @@
+requests
+pyquery>=1.4.0
+pymongo>=2.7.2
