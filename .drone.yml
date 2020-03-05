@@ -6,6 +6,16 @@ steps:
     image: alpine:3.11
     commands:
       - env
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: ${DockerRegistry}/${DRONE_REPO}
+      registry: ${DockerRegistry}
+      insecure: true
+      mirror: "https://gecwf5gs.mirror.aliyuncs.com"
+      tags:
+        - latest
+        - ${DRONE_COMMIT}
 
 node:
   env: act
